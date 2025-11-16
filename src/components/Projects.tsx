@@ -1,17 +1,23 @@
 export default function Projects() {
   const projects = [
     {
-      title: "ViBe: A Text-to-Video Benchmark for Evaluating Hallucination in Large Multimodal Models",
+      title: "Chatbot with Machine Learning and Python",
       authors:
-        "Vipula Rawte, Sarthak Jain, Aarush Sinha, Garv Kaushik, Aman Bansal, Prathiksha Rumale Vishwanath, Samyak Rajesh Jain, Aishwarya Naresh Reganti, Vinija Jain, Aman Chadha, Amit P Sheth, Amitava Das",
-      venue: "The 5th Workshop on Trustworthy NLP @ NAACL 2025",
-      image: "/research-paper-stack.png",
+        "Kishan Ojha",
+      venue: "SRM IST University",
+      image: "https://img-c.udemycdn.com/course/750x422/5914768_8635_2.jpg",
     },
     {
-      title: "Dense Retrieval with Efficient Transformers",
-      authors: "Your Name, Co-authors",
-      venue: "Conference 2025",
-      image: "/research-project.png",
+      title: "Image Classification with TensorFlow",
+      authors: "Kishan Ojha",
+      venue: "SRM IST University",
+      image: "https://www.kdnuggets.com/wp-content/uploads/chugh_guide_train_image_classification_model_tensorflow_1.jpg",
+    },
+    {
+      title: "Management System",
+      authors: "Kishan Ojha",
+      venue: "SRM IST University",
+      image: "https://raw.githubusercontent.com/RaviSingla23/Hospital-Management-System/master/ScreenShots/login.png",
     },
   ]
 

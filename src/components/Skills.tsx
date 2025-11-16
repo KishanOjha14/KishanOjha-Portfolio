@@ -8,10 +8,12 @@ export default function Skills() {
   const skillCategories = {
     "Programming Languages": ["C", "C++", "Java", "Python", "JavaScript", "TypeScript"],
     "Frontend Development": ["React", "Next.js", "Tailwind CSS", "HTML", "CSS"],
-    "Backend Development": ["Node.js", "Express", "REST APIs", "GraphQL"],
+    "Backend Development": ["Node.js", "Express", "REST APIs", "GraphQL" , "Django"],
     "Database Management": ["PostgreSQL", "MongoDB", "Firebase"],
-    "UI/UX Design": ["Figma", "Adobe XD", "Prototyping"],
+    "Tools and Technologies": ["Figma", "Adobe XD", "Prototyping" , "Notion"],
     "DevOps & Deployment": ["Docker", "Git", "GitHub", "Vercel"],
+    "AI/ML & Data Science": ["TensorFlow", "OpenCV", "Pandas", "NumPy"],
+
   }
 
   const categories = Object.keys(skillCategories)

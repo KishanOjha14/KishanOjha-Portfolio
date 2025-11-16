@@ -1,37 +1,42 @@
 export default function Experience() {
   const experiences = [
     {
-      title: "President@NotionCommunityVITB, Co-Lead @E-cell",
-      company: "University Club's Lead Position",
-      details: "Former's Tech, Creative, operations and Events team Lead",
-      period: "Dec 2023 - Present",
-      type: "Full-time • VIT Bhopal University • Hybrid",
+      title: "Project Intern",
+      company: "Hindalco Industries Ltd.",
+      details: [
+        "During my internship at Hindalco Industries Ltd, I had the opportunity to work on a real-world Java-based project, which helped me apply my technical knowledge to practical industrial scenarios. The experience gave me a deeper understanding of software development, backend integration, and database management in a professional environment.",
+        "Gained hands-on experience in building Java-based full-stack applications connected with MySQL databases.",                                                                                                                                                                                                          
+        "Learned how to handle data modeling, CRUD operations, and database optimization for performance.",
+        "Collaborated with mentors and engineers to debug, document, and improve code quality following best practices."
+      ],
+      period: "Jul, 2024 - Aug, 2024",                                                    
+      type: "On-site • Internship ",
       icon: "🏢",
     },
-    {
-      title: "Content Writing",
-      company: "Team Everest NGO",
-      details: "Team Everest NGO •",
-      period: "Nov, 2023",
-      type: "Internship • online •",
-      icon: "✍️",
-    },
-    {
-      title: "Content Writing",
-      company: "Earth 5R",
-      details: "Earth 5R •",
-      period: "Nov, 2023",
-      type: "Internship • remote •",
-      icon: "🌍",
-    },
-    {
-      title: "Internshala Student Partner",
-      company: "Internshala",
-      details: "Internshala • Campus Ambassador",
-      period: "Jun, 2024 - Aug, 2024",
-      type: "Part-time • • Remote",
-      icon: "📱",
-    },
+    // {
+    //   title: "Content Writing",                                                                                      
+    //   company: "Team Everest NGO",                                                                                                                                                 
+    //   details: "Team Everest NGO •",
+    //   period: "Nov, 2023",
+    //   type: "Internship • online •",
+    //   icon: "✍️",
+    // },
+    // {
+    //   title: "Content Writing",
+    //   company: "Earth 5R",
+    //   details: "Earth 5R •",
+    //   period: "Nov, 2023",
+    //   type: "Internship • remote •",
+    //   icon: "🌍",
+    // },
+    // {
+    //   title: "Internshala Student Partner",
+    //   company: "Internshala",
+    //   details: "Internshala • Campus Ambassador",
+    //   period: "Jun, 2024 - Aug, 2024",
+    //   type: "Part-time • • Remote",
+    //   icon: "📱",
+    // },
   ]
 
   return (
@@ -58,10 +63,10 @@ export default function Experience() {
         ))}
       </div>
 
-      {/* Download Resume Button */}
+      {/* View Resume Button */}
       <div className="flex justify-center">
         <button className="px-8 py-3 bg-gray-900 text-white font-medium rounded hover:bg-gray-800 transition-colors">
-          Download Resume
+          View Resume
         </button>
       </div>
     </section>

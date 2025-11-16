@@ -1,19 +1,25 @@
 export default function Education() {
   const education = [
     {
-      period: "2023 - Present",
-      degree: "B.Tech CSE (Specialization in Health Informatics)",
-      institution: "VIT Bhopal University, (Bhopal, Madhya Pradesh)",
+      period: "2025 - Present",
+      degree: "Master's in Computer Applications (Generative AI)",
+      institution: "SRM University, (IST)",
       description:
-        "I am currently a second-year student at VIT Bhopal University, pursuing a B.Tech. in Computer Science and Engineering with a specialization in Health Informatics. Throughout my 1st year, My Cumulative GPA is 9.4",
+        "I am currently pursuing my Master’s with a specialization in Generative AI, where I am exploring advanced concepts in machine learning, deep learning, and AI-driven system development. My academic journey focuses on understanding neural architectures, LLMs, model training pipelines, and practical applications of generative models. Through various projects and research-oriented coursework, I am developing the ability to design intelligent, scalable, and production-ready AI solutions tailored to industry needs.",
     },
     {
-      period: "2021 - 2023",
-      degree: "NEET U.G. Preparation",
-      institution: "Allen Career Institute, Kota, Rajasthan",
-      description:
-        "I dedicated my time to preparing for the NEET Examination. To achieve my goal, I enrolled in ALLEN Institute, Kota, where I was in their prestigious SRG Batch and achieved 607/720 in the Exam.",
-    },
+      period: "2022 - 2025",
+      degree: "Bachelor's in Computer Applications",
+      institution: "IMS Ghaziabad (Ghaziabad, Uttar Pradesh)",
+      description: [
+        "Developed a strong foundation in computer science, programming, and software development.",
+        "Worked with languages and tools such as Java, Python, HTML, CSS, JavaScript, SQL, and Django.",
+        "Gained practical experience in full-stack web development and database management.",
+        "Explored topics like data structures, algorithms, and operating systems through academic projects.",
+        "Participated in workshops and coding challenges that strengthened problem-solving and teamwork skills."
+    ],
+}
+,
   ]
 
   return (

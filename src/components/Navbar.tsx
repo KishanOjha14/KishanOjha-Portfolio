@@ -13,8 +13,8 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex flex-col">
-            <h1 className="text-xl font-semibold text-gray-900">Your Name</h1>
-            <p className="text-sm text-gray-500">Student | Developer</p>
+            <h1 className="text-xl font-semibold text-gray-900">Kishan Kumar Ojha</h1>
+            <p className="text-sm text-gray-500">Kishan Kumar Ojha | Developer</p>
           </div>
           <div className="hidden md:flex gap-8">
             {navItems.map((item) => (
