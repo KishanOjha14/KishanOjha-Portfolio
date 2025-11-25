@@ -3,9 +3,9 @@ export default function Hero() {
     <section className="text-center py-20">
       <div className="mb-8 flex justify-center">
         <img
-          src="/WhatsApp Image 2025-10-23 at 11.28.07 AM.jpeg"
+          src="https://github.com/KishanOjha14/KishanOjha-Portfolio/blob/main/public/WhatsApp%20Image%202025-10-23%20at%2011.28.07%20AM.jpeg?raw=true"
           alt="Profile"
-          className="w-32 h-32 rounded-full object-cover border-2 border-gray-200 shadow-md"
+          className="w-32 h-32 rounded-full object-cover object-center border-2 border-gray-200 shadow-md"
         />
       </div>
 

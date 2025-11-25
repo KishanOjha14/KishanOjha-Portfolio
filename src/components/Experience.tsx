@@ -1,15 +1,26 @@
+import React from 'react';
+
 export default function Experience() {
   const experiences = [
     {
       title: "Project Intern",
       company: "Hindalco Industries Ltd.",
       details: [
-        "During my internship at Hindalco Industries Ltd, I had the opportunity to work on a real-world Java-based project, which helped me apply my technical knowledge to practical industrial scenarios. The experience gave me a deeper understanding of software development, backend integration, and database management in a professional environment.",
-        "Gained hands-on experience in building Java-based full-stack applications connected with MySQL databases.",                                                                                                                                                                                                          
-        "Learned how to handle data modeling, CRUD operations, and database optimization for performance.",
-        "Collaborated with mentors and engineers to debug, document, and improve code quality following best practices."
-      ],
-      period: "Jul, 2024 - Aug, 2024",                                                    
+    <div>
+  <p>
+    During my internship at Hindalco Industries Ltd, I had the opportunity to work on a real-world Java-based project, applying technical knowledge to practical scenarios and deepening my understanding of backend integration and database management.
+  </p>
+  <h2>Key Contributions & Learnings:</h2>
+  <ul>
+    <li>1. Built Java-based full-stack applications connected to MySQL databases.</li>
+    <li>2. Handled data modeling, CRUD operations, and database optimization for performance.</li>
+    <li>3. Collaborated with mentors and engineers to debug, document, and improve code quality following best practices.</li>
+  </ul>
+  <span>On-site • Internship</span>
+</div>
+
+  ],
+      period: "Jul, 2024 - Aug, 2024",
       type: "On-site • Internship ",
       icon: "🏢",
     },
@@ -65,9 +76,11 @@ export default function Experience() {
 
       {/* View Resume Button */}
       <div className="flex justify-center">
-        <button className="px-8 py-3 bg-gray-900 text-white font-medium rounded hover:bg-gray-800 transition-colors">
-          View Resume
-        </button>
+        <a href="https://drive.google.com/file/d/1C6794-uI4Jv4OUFcK7QesrUV7Xq7abg4/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          <button className="px-8 py-3 bg-gray-900 text-white font-medium rounded hover:bg-gray-800 transition-colors">
+            View Resume
+          </button>
+        </a>
       </div>
     </section>
   )

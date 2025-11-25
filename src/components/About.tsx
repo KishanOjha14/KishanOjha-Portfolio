@@ -4,7 +4,7 @@ export default function About() {
       <div className="grid md:grid-cols-2 gap-12 items-start">
         <div>
           <h2 className="text-3xl font-bold text-gray-900 mb-6">About</h2>
-          <img src="/public/WhatsApp Image 2025-10-23 at 11.28.07 AM.jpeg" alt="About" className="w-full rounded-lg object-cover mb-6" />
+          <img src="https://github.com/KishanOjha14/KishanOjha-Portfolio/blob/main/public/WhatsApp%20Image%202025-10-23%20at%2011.28.07%20AM.jpeg?raw=true" alt="About" className="w-full rounded-lg object-cover mb-6" />
         </div>
         <div>
           <p className="text-gray-700 leading-relaxed mb-4">
