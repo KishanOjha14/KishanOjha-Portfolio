@@ -1,26 +1,32 @@
-"use client"
+'use client';
 
-import { useCallback } from "react"
-import { X, ExternalLink, Github as GithubIcon } from "lucide-react"
-import { cn } from "@/lib/utils"
-import { PROJECTS, type Project } from "@/data/projects"
+import { useCallback } from 'react';
+import { X, Github as GithubIcon } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { type Project } from '@/data/projects';
 
 const CATEGORY_LABELS: Record<string, string> = {
-  all: "All",
-  "ai-generative": "Generative AI / AI",
-  "machine-learning": "Machine Learning",
-  "deep-learning-vision": "Deep Learning / Computer Vision",
-  "data-analytics": "Data Analytics",
-  "software-engineering": "Software Engineering",
-}
+  all: 'All',
+  'ai-generative': 'Generative AI / AI',
+  'machine-learning': 'Machine Learning',
+  'deep-learning-vision': 'Deep Learning / Computer Vision',
+  'data-analytics': 'Data Analytics',
+  'software-engineering': 'Software Engineering',
+};
 
-export default function ProjectDetail({ project, onClose }: { project: Project; onClose: () => void }) {
+export default function ProjectDetail({
+  project,
+  onClose,
+}: {
+  project: Project;
+  onClose: () => void;
+}) {
   const close = useCallback(
     (e: React.KeyboardEvent) => {
-      if (e.key === "Escape") onClose()
+      if (e.key === 'Escape') onClose();
     },
-    [onClose],
-  )
+    [onClose]
+  );
 
   return (
     <div
@@ -30,7 +36,7 @@ export default function ProjectDetail({ project, onClose }: { project: Project; 
       aria-labelledby="project-detail-title"
       onKeyDown={close}
       onClick={(e) => {
-        if (e.target === e.currentTarget) onClose()
+        if (e.target === e.currentTarget) onClose();
       }}
     >
       <div className="relative w-full max-w-5xl max-h-[92vh] flex flex-col overflow-hidden bg-[var(--bg-surface)] border border-[var(--border)] rounded-[var(--radius-3xl)] shadow-2xl">
@@ -73,34 +79,59 @@ export default function ProjectDetail({ project, onClose }: { project: Project; 
             </div>
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-2">
-                <span className={`badge text-[0.65rem] uppercase tracking-wider ${cn(
-                  project.featured ? "badge-accent" : "border-[var(--border)] text-[var(--text-muted)]",
-                )}`}>
+                <span
+                  className={`badge text-[0.65rem] uppercase tracking-wider ${cn(
+                    project.featured
+                      ? 'badge-accent'
+                      : 'border-[var(--border)] text-[var(--text-muted)]'
+                  )}`}
+                >
                   {CATEGORY_LABELS[project.category] || project.category}
                 </span>
                 {project.featured && (
-                  <span className="badge badge-accent text-[0.65rem] uppercase tracking-wider">Featured</span>
+                  <span className="badge badge-accent text-[0.65rem] uppercase tracking-wider">
+                    Featured
+                  </span>
                 )}
               </div>
-              <h2 id="project-detail-title" className="text-[1.75rem] md:text-[2.25rem] font-bold text-[var(--text)] leading-[1.25] mb-3">
+              <h2
+                id="project-detail-title"
+                className="text-[1.75rem] md:text-[2.25rem] font-bold text-[var(--text)] leading-[1.25] mb-3"
+              >
                 {project.name}
               </h2>
-              <p className="text-[var(--text-body)] leading-relaxed mb-6 max-w-[48ch]">{project.description}</p>
+              <p className="text-[var(--text-body)] leading-relaxed mb-6 max-w-[48ch]">
+                {project.description}
+              </p>
               <section className="space-y-6">
                 <div>
-                  <h4 className="font-semibold text-[var(--text)] text-[0.75rem] uppercase tracking-wider mb-2">Problem</h4>
-                  <p className="text-[var(--text-body)] leading-relaxed text-sm">{project.problem}</p>
+                  <h4 className="font-semibold text-[var(--text)] text-[0.75rem] uppercase tracking-wider mb-2">
+                    Problem
+                  </h4>
+                  <p className="text-[var(--text-body)] leading-relaxed text-sm">
+                    {project.problem}
+                  </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[var(--text)] text-[0.75rem] uppercase tracking-wider mb-2">Solution</h4>
-                  <p className="text-[var(--text-body)] leading-relaxed text-sm">{project.solution}</p>
+                  <h4 className="font-semibold text-[var(--text)] text-[0.75rem] uppercase tracking-wider mb-2">
+                    Solution
+                  </h4>
+                  <p className="text-[var(--text-body)] leading-relaxed text-sm">
+                    {project.solution}
+                  </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[var(--text)] text-[0.75rem] uppercase tracking-wider mb-2">Technical Implementation</h4>
-                  <p className="text-[var(--text-body)] leading-relaxed text-sm">{project.implementation}</p>
+                  <h4 className="font-semibold text-[var(--text)] text-[0.75rem] uppercase tracking-wider mb-2">
+                    Technical Implementation
+                  </h4>
+                  <p className="text-[var(--text-body)] leading-relaxed text-sm">
+                    {project.implementation}
+                  </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[var(--text)] text-[0.75rem] uppercase tracking-wider mb-2">Key Features</h4>
+                  <h4 className="font-semibold text-[var(--text)] text-[0.75rem] uppercase tracking-wider mb-2">
+                    Key Features
+                  </h4>
                   <ul className="space-y-2 text-[var(--text-body)] leading-relaxed text-sm list-disc list-inside">
                     {project.features.map((f) => (
                       <li key={f}>{f}</li>
@@ -108,31 +139,47 @@ export default function ProjectDetail({ project, onClose }: { project: Project; 
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[var(--text)] text-[0.75rem] uppercase tracking-wider mb-2">Technology Stack</h4>
+                  <h4 className="font-semibold text-[var(--text)] text-[0.75rem] uppercase tracking-wider mb-2">
+                    Technology Stack
+                  </h4>
                   <div className="flex flex-wrap gap-2">
                     {project.stack.map((s) => (
-                      <span key={s} className="skill-tag">{s}</span>
+                      <span key={s} className="skill-tag">
+                        {s}
+                      </span>
                     ))}
                   </div>
                 </div>
                 {project.aiML && (
                   <div className="border-t border-[var(--border)] pt-6">
-                    <h4 className="font-semibold text-[var(--text)] text-[0.75rem] uppercase tracking-wider mb-3">Machine Learning Details</h4>
+                    <h4 className="font-semibold text-[var(--text)] text-[0.75rem] uppercase tracking-wider mb-3">
+                      Machine Learning Details
+                    </h4>
                     {project.aiML.dataset && (
                       <div className="mb-4">
-                        <p className="text-[0.65rem] font-semibold text-[var(--text-muted)] uppercase tracking-wide mb-1">Dataset</p>
-                        <p className="text-[var(--text-body)] leading-relaxed text-sm">{project.aiML.dataset}</p>
+                        <p className="text-[0.65rem] font-semibold text-[var(--text-muted)] uppercase tracking-wide mb-1">
+                          Dataset
+                        </p>
+                        <p className="text-[var(--text-body)] leading-relaxed text-sm">
+                          {project.aiML.dataset}
+                        </p>
                       </div>
                     )}
                     {project.aiML.architecture && (
                       <div className="mb-4">
-                        <p className="text-[0.65rem] font-semibold text-[var(--text-muted)] uppercase tracking-wide mb-1">Model Architecture</p>
-                        <p className="text-[var(--text-body)] leading-relaxed text-sm">{project.aiML.architecture}</p>
+                        <p className="text-[0.65rem] font-semibold text-[var(--text-muted)] uppercase tracking-wide mb-1">
+                          Model Architecture
+                        </p>
+                        <p className="text-[var(--text-body)] leading-relaxed text-sm">
+                          {project.aiML.architecture}
+                        </p>
                       </div>
                     )}
                     {project.aiML.methodology && project.aiML.methodology.length > 0 && (
                       <div className="mb-4">
-                        <p className="text-[0.65rem] font-semibold text-[var(--text-muted)] uppercase tracking-wide mb-1">Evaluation Methodology</p>
+                        <p className="text-[0.65rem] font-semibold text-[var(--text-muted)] uppercase tracking-wide mb-1">
+                          Evaluation Methodology
+                        </p>
                         <ul className="text-[var(--text-body)] leading-relaxed text-sm list-disc list-inside space-y-1">
                           {project.aiML.methodology.map((m) => (
                             <li key={m}>{m}</li>
@@ -142,7 +189,9 @@ export default function ProjectDetail({ project, onClose }: { project: Project; 
                     )}
                     {project.aiML.metrics && project.aiML.metrics.length > 0 && (
                       <div className="mb-4">
-                        <p className="text-[0.65rem] font-semibold text-[var(--text-muted)] uppercase tracking-wide mb-1">Reported Metrics</p>
+                        <p className="text-[0.65rem] font-semibold text-[var(--text-muted)] uppercase tracking-wide mb-1">
+                          Reported Metrics
+                        </p>
                         <ul className="text-[var(--text-body)] leading-relaxed text-sm list-disc list-inside space-y-1">
                           {project.aiML.metrics.map((m) => (
                             <li key={m}>{m}</li>
@@ -152,13 +201,19 @@ export default function ProjectDetail({ project, onClose }: { project: Project; 
                     )}
                     {project.aiML.explainability && (
                       <div className="mb-4">
-                        <p className="text-[0.65rem] font-semibold text-[var(--text-muted)] uppercase tracking-wide mb-1">Explainability</p>
-                        <p className="text-[var(--text-body)] leading-relaxed text-sm">{project.aiML.explainability}</p>
+                        <p className="text-[0.65rem] font-semibold text-[var(--text-muted)] uppercase tracking-wide mb-1">
+                          Explainability
+                        </p>
+                        <p className="text-[var(--text-body)] leading-relaxed text-sm">
+                          {project.aiML.explainability}
+                        </p>
                       </div>
                     )}
                     {project.aiML.limitations && project.aiML.limitations.length > 0 && (
                       <div className="mb-4">
-                        <p className="text-[0.65rem] font-semibold text-[var(--text-muted)] uppercase tracking-wide mb-1">Limitations</p>
+                        <p className="text-[0.65rem] font-semibold text-[var(--text-muted)] uppercase tracking-wide mb-1">
+                          Limitations
+                        </p>
                         <ul className="text-[var(--text-body)] leading-relaxed text-sm list-disc list-inside space-y-1">
                           {project.aiML.limitations.map((l) => (
                             <li key={l}>{l}</li>
@@ -170,13 +225,19 @@ export default function ProjectDetail({ project, onClose }: { project: Project; 
                 )}
                 {project.backend && (
                   <div className="border-t border-[var(--border)] pt-6">
-                    <h4 className="font-semibold text-[var(--text)] text-[0.75rem] uppercase tracking-wider mb-3">Backend & Architecture</h4>
+                    <h4 className="font-semibold text-[var(--text)] text-[0.75rem] uppercase tracking-wider mb-3">
+                      Backend & Architecture
+                    </h4>
                     <ul className="space-y-2 text-[var(--text-body)] leading-relaxed text-sm list-disc list-inside">
-                      {project.backend.architecture && <li>Architecture: {project.backend.architecture}</li>}
+                      {project.backend.architecture && (
+                        <li>Architecture: {project.backend.architecture}</li>
+                      )}
                       {project.backend.api && <li>API design: {project.backend.api}</li>}
                       {project.backend.auth && <li>Authentication: {project.backend.auth}</li>}
                       {project.backend.database && <li>Database: {project.backend.database}</li>}
-                      {project.backend.deployment && <li>Deployment: {project.backend.deployment}</li>}
+                      {project.backend.deployment && (
+                        <li>Deployment: {project.backend.deployment}</li>
+                      )}
                     </ul>
                   </div>
                 )}
@@ -186,5 +247,5 @@ export default function ProjectDetail({ project, onClose }: { project: Project; 
         </div>
       </div>
     </div>
-  )
+  );
 }
