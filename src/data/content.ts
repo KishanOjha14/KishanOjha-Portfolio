@@ -2,11 +2,11 @@ export const NAME = "Kishan Kumar Ojha"
 
 export const IDENTITY = {
   name: NAME,
-  headline: "AI Engineer | Generative AI | Machine Learning | Python",
+  headline: "AI Engineer | Generative AI | Machine Learning",
   tagline:
     "Building intelligent applications through Machine Learning, Generative AI and software engineering.",
   introduction:
-    "I'm Kishan Kumar Ojha, an MCA candidate specializing in Generative AI at SRM Institute of Science and Technology. I enjoy building intelligent applications, exploring machine learning systems, working with data and developing technology-driven solutions. My interests span Generative AI, deep learning, computer vision, data analytics and software engineering.",
+    "I'm Kishan Kumar Ojha, an MCA candidate specializing in Generative AI at SRM Institute of Science and Technology. I build intelligent applications and explore machine learning, deep learning, computer vision and data-driven systems, combining AI capabilities with software engineering fundamentals.",
   location: "Noida, India",
   email: "work.kishanojha@gmail.com",
   phone: "+91 8739047520",
@@ -17,10 +17,11 @@ export const HERO = {
   headline: IDENTITY.headline,
   tagline: IDENTITY.tagline,
   introduction: IDENTITY.introduction,
+  availability: "Available for collaboration",
   actions: [
     { label: "Explore Projects", href: "#projects", variant: "primary" },
     { label: "Read Technical Notes", href: "#blog", variant: "outline" },
-    { label: "Download Resume", href: "#resume", variant: "outline" },
+    { label: "Download AI/ML Resume", href: "#resume", variant: "outline" },
     { label: "Contact Me", href: "#contact", variant: "outline" },
   ],
   socials: [
@@ -32,11 +33,17 @@ export const HERO = {
 
 export const ABOUT = {
   title: "About Me",
+  subtitle: "A concise professional introduction.",
   paragraphs: [
     "I'm an MCA candidate specializing in Generative AI at SRM Institute of Science and Technology (expected May 2027), building on a Bachelor of Computer Applications from IMS Ghaziabad (July 2022 – July 2025). My academic journey has given me a structured foundation in computer science, while my projects and internships have taught me how to turn that foundation into working software.",
     "On the AI side, I've worked with PyTorch and Scikit-learn to build machine learning models, trained a CNN for CT-scan image classification, and explored medical imaging research using DenseNet121 and the NIH ChestX-ray14 dataset. I've also analyzed 7,000+ telecom records end-to-end — from SQL Server data preparation to Power BI dashboards — surfacing churn patterns and retention insights.",
-    "On the engineering side, I've spent time as a Software Engineering Intern at Scramble Labs Technology, enhancing a production enterprise CRM platform with Spring Boot, Hibernate and MySQL, designing 15+ RESTful APIs, and deploying containerized services on AWS. Before that, I built backend modules for a Java-based Car Rental Management System at Hindalco Industries. I'm also a co-founder at ArnoLabs, where we build web platforms, APIs and automation workflows for business clients.",
+    "On the engineering side, I spent time as a Software Engineering Intern at Scramble Labs Technology, enhancing a production enterprise CRM platform with Spring Boot, Hibernate and MySQL, designing 15+ RESTful APIs, and deploying containerized services on AWS. Before that, I built backend modules for a Java-based Car Rental Management System at Hindalco Industries. I'm also a co-founder at ArnoLabs, where we build web platforms, APIs and automation workflows for business clients.",
     "I see myself as an aspiring AI Engineer: comfortable with models and data, but grounded in the software engineering practices — APIs, databases, cloud deployment, testing — that make intelligent applications reliable enough to ship.",
+  ],
+  leftColumn: [
+    { label: "Education", value: "MCA · Generative AI", sub: "SRM IST · Expected May 2027" },
+    { label: "Focus", value: "AI Engineering", sub: "ML · Deep Learning · CV" },
+    { label: "Location", value: "Noida, India", sub: "Open to collaboration" },
   ],
 }
 
@@ -165,11 +172,14 @@ export const EDUCATION = [
 
 export const CONTACT = {
   title: "Let's Connect",
-  message:
+  subtitle:
     "Interested in AI engineering, Generative AI, machine learning and building useful intelligent applications. Always open to meaningful technical conversations and collaboration.",
   email: "work.kishanojha@gmail.com",
   phone: "+91 8739047520",
   location: "Noida, India",
+  emailLabel: "Email",
+  phoneLabel: "Phone",
+  locationLabel: "Location",
 }
 
 export const SOCIALS = [
@@ -177,6 +187,21 @@ export const SOCIALS = [
   { label: "GitHub", url: "https://github.com/KishanOjha14", icon: "github" },
   { label: "LinkedIn", url: "https://www.linkedin.com/in/kishankumarojha/", icon: "linkedin" },
   { label: "Kaggle", url: "https://www.kaggle.com/kishanojha34", icon: "kaggle" },
+]
+
+export const RESUMES = [
+  {
+    label: "AI/ML Resume",
+    file: "/assets/resumes/Kishan-Kumar-Ojha-AI-ML-Resume.pdf",
+    description: "Primary resume for AI/ML and Generative AI roles",
+    icon: "file",
+  },
+  {
+    label: "Software Engineering Resume",
+    file: "/assets/resumes/Kishan-Kumar-Ojha-Software-Engineering-Resume.pdf",
+    description: "Backend and software development focused resume",
+    icon: "file",
+  },
 ]
 
 export const NAV_ITEMS = [

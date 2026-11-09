@@ -39,8 +39,7 @@ export default function Projects() {
               subtitle="Selected work spanning AI/ML, data analytics and software engineering."
             />
           </ScrollReveal>
-
-          <div className="flex flex-wrap justify-between items-center gap-3 mb-9">
+          <div className="flex flex-wrap justify-between items-center gap-3 mb-10">
             <div className="flex flex-wrap gap-2">
               {PROJECT_CATEGORIES.map((cat) => {
                 const Icon = CATEGORY_ICONS[cat.key]
@@ -60,18 +59,17 @@ export default function Projects() {
                 )
               })}
             </div>
-            <div className="flex items-center gap-2 text-[var(--text-muted)] text-[0.75rem]">
+            <div className="flex items-center gap-2 text-[var(--text-muted)] text-xs">
               <Filter className="w-3 h-3" /> {filtered.length} project{filtered.length !== 1 ? "s" : ""}
             </div>
           </div>
-
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map((project) => {
               const Icon = CATEGORY_ICONS[project.category]
               return (
                 <div
                   key={project.id}
-                  className="card p-6 hover:border-accent/50 cursor-pointer transition-colors"
+                  className="card p-7 hover:border-accent/50 cursor-pointer transition-colors group relative overflow-hidden"
                   onClick={() => setOpenProject(project)}
                   role="button"
                   tabIndex={0}
@@ -79,33 +77,26 @@ export default function Projects() {
                     if (e.key === "Enter" || e.key === " ") setOpenProject(project)
                   }}
                 >
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="w-10 h-10 rounded-[var(--radius-xl)] bg-accent/5 flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-accent" />
+                  <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/5 transition-colors pointer-events-none" />
+                  <div className="relative z-10 flex justify-between items-start mb-5">
+                    <div className="w-11 h-11 rounded-2xl bg-accent/5 flex items-center justify-center group-hover:bg-accent/10 transition-colors">
+                      <Icon className="w-5 h-5 text-accent group-hover:text-accent-hover" />
                     </div>
                     {project.featured && (
-                      <span className="badge text-[0.65rem] border-accent/40 bg-accent/5 text-accent uppercase tracking-wider">
-                        Featured
-                      </span>
+                      <span className="badge badge-accent text-[0.65rem] uppercase tracking-wider">Featured</span>
                     )}
                   </div>
                   <h3 className="font-bold text-[var(--text)] text-lg mb-2 group-hover:text-accent transition-colors">
                     {project.name}
                   </h3>
-                  <p className="text-[var(--text-body)] text-sm leading-relaxed mb-4 line-clamp-2">
-                    {project.tagline}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.stack.slice(0, 4).map((s) => (
-                      <span key={s} className="skill-tag">
-                        {s}
-                      </span>
+                  <p className="text-[var(--text-body)] text-sm leading-relaxed mb-5 line-clamp-2">{project.tagline}</p>
+                  <div className="flex flex-wrap gap-2.5 mb-7">
+                    {project.stack.slice(0, 5).map((s) => (
+                      <span key={s} className="skill-tag">{s}</span>
                     ))}
                   </div>
-                  <div className="pt-4 border-t border-[var(--border-soft)]">
-                    <p className="text-[0.7rem] font-semibold text-accent uppercase tracking-wide">
-                      View details →
-                    </p>
+                  <div className="pt-5 border-t border-[var(--border-soft)]">
+                    <p className="text-[0.7rem] font-semibold text-accent uppercase tracking-wide">View details &rarr;</p>
                   </div>
                 </div>
               )
@@ -113,7 +104,6 @@ export default function Projects() {
           </div>
         </div>
       </section>
-
       {openProject && <ProjectDetail project={openProject} onClose={() => setOpenProject(null)} />}
     </>
   )

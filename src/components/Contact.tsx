@@ -1,6 +1,6 @@
 "use client"
 
-import { CONTACT, SOCIALS } from "@/data/content"
+import { CONTACT, SOCIALS, RESUMES } from "@/data/content"
 import ScrollReveal from "./ScrollReveal"
 import SectionHeader from "./SectionHeader"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
@@ -20,91 +20,74 @@ export default function Contact() {
     <section id="contact" className="section border-t border-[var(--border)]" aria-labelledby="contact-title">
       <div className="container-page">
         <ScrollReveal delay={1}>
-          <SectionHeader title="Let's Connect" subtitle={CONTACT.message} />
+          <SectionHeader title="Let's Connect" subtitle={CONTACT.subtitle} />
         </ScrollReveal>
-
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-12">
           <ScrollReveal delay={2}>
-            <div id="resume" className="space-y-5">
-              <div className="card p-6">
-                <div className="flex items-center gap-3 mb-3">
+            <div className="space-y-5" id="resume">
+              <div className="card p-7">
+                <div className="flex items-center gap-3 mb-4">
                   <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
                   </svg>
                   <p className="font-semibold text-[var(--text)] text-sm">Download Resume</p>
                 </div>
-                <p className="text-[var(--text-muted)] text-[0.8rem] mb-4">
-                  Two versions available — choose the one most relevant to the role.
-                </p>
                 <div className="grid gap-3">
-                  <a
-                    href="/assets/resumes/Kishan-Kumar-Ojha-AI-ML-Resume.pdf"
-                    className="flex items-center justify-between btn btn-outline px-4 py-3 text-[0.8rem]"
-                  >
-                    <span>AI/ML Resume (primary)</span>
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
-                    </svg>
-                  </a>
-                  <a
-                    href="/assets/resumes/Kishan-Kumar-Ojha-Software-Engineering-Resume.pdf"
-                    className="flex items-center justify-between btn btn-outline px-4 py-3 text-[0.8rem]"
-                  >
-                    <span>Software Engineering Resume</span>
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
-                    </svg>
-                  </a>
+                  {RESUMES.map((r) => (
+                    <a
+                      key={r.label}
+                      href={r.file}
+                      className="flex items-center justify-between btn btn-outline px-4 py-3.5 text-sm"
+                    >
+                      <div>
+                        <span className="text-[var(--text)]">{r.label}</span>
+                        <p className="text-[0.7rem] text-[var(--text-muted)]">{r.description}</p>
+                      </div>
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                      </svg>
+                    </a>
+                  ))}
                 </div>
               </div>
-              <div className="card p-6">
+              <div className="card p-7">
                 <div className="flex items-center gap-3 mb-3">
                   <Mail className="w-4 h-4 text-accent" />
-                  <p className="font-semibold text-[var(--text)] text-sm">Email</p>
+                  <p className="font-semibold text-[var(--text)] text-sm">{CONTACT.emailLabel}</p>
                 </div>
-                <a
-                  href="mailto:work.kishanojha@gmail.com"
-                  className="text-[var(--text-body)] text-[0.85rem] hover:text-accent transition-colors"
-                >
+                <a href="mailto:work.kishanojha@gmail.com" className="text-[var(--text-body)] text-sm hover:text-accent transition-colors">
                   work.kishanojha@gmail.com
                 </a>
               </div>
-              <div className="card p-6">
+              <div className="card p-7">
                 <div className="flex items-center gap-3 mb-3">
                   <Phone className="w-4 h-4 text-accent" />
-                  <p className="font-semibold text-[var(--text)] text-sm">Phone</p>
+                  <p className="font-semibold text-[var(--text)] text-sm">{CONTACT.phoneLabel}</p>
                 </div>
-                <a
-                  href="tel:+918739047520"
-                  className="text-[var(--text-body)] text-[0.85rem] hover:text-accent transition-colors"
-                >
+                <a href="tel:+918739047520" className="text-[var(--text-body)] text-sm hover:text-accent transition-colors">
                   +91 8739047520
                 </a>
               </div>
-              <div className="card p-6">
+              <div className="card p-7">
                 <div className="flex items-center gap-3 mb-3">
                   <MapPin className="w-4 h-4 text-accent" />
-                  <p className="font-semibold text-[var(--text)] text-sm">Location</p>
+                  <p className="font-semibold text-[var(--text)] text-sm">{CONTACT.locationLabel}</p>
                 </div>
-                <p className="text-[var(--text-body)] text-[0.85rem]">{CONTACT.location}</p>
+                <p className="text-[var(--text-body)] text-sm">{CONTACT.location}</p>
               </div>
             </div>
           </ScrollReveal>
-
           <ScrollReveal delay={3}>
             <div className="card p-8 lg:p-10">
               <div className="flex items-center gap-3 mb-5">
                 <Send className="w-4 h-4 text-accent" />
                 <p className="font-semibold text-[var(--text)] text-sm">Send a message</p>
               </div>
-              <p className="text-[var(--text-body)] text-[0.85rem] leading-relaxed mb-6">
-                This is a static site with no form backend, so clicking below opens your mail
-                client with a pre-filled subject — a real email, no fake form.
+              <p className="text-[var(--text-body)] text-sm leading-relaxed mb-6">
+                This is a static site with no form backend, so clicking below opens your mail client with a pre-filled
+                subject — a real email, no fake form.
               </p>
-              <button
-                onClick={handleEmail}
-                className="w-full flex items-center justify-center gap-2 btn btn-primary px-6 py-3.5 text-[0.85rem]"
-              >
+              <button onClick={handleEmail} className="w-full flex items-center justify-center gap-2 btn btn-primary px-6 py-3.5 text-sm">
                 <Send className="w-3 h-3" /> Email Kishan
               </button>
               <div className="mt-10">

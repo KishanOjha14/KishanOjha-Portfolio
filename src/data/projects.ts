@@ -151,7 +151,7 @@ export const PROJECTS: Project[] = [
       "Bootstrap confidence intervals and Grad-CAM explainability",
     ],
     stack: ["Python", "PyTorch", "DenseNet121", "SciPy", "Grad-CAM"],
-    image: "/assets/images/hero-visual.svg",
+    image: "/assets/images/xray.svg",
     github: undefined,
     aiML: {
       dataset: "NIH ChestX-ray14 dataset",

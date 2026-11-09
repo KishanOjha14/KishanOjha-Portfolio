@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#F6F5F2"/>
+  <circle cx="900" cy="120" r="420" fill="#E8E6E0"/>
+  <circle cx="300" cy="510" r="340" fill="#F2F0EC"/>
+  <circle cx="620" cy="300" r="20" fill="#6557D2" opacity="0.4"/>
+  <path d="M420 280 Q600 240 780 320" stroke="#6557D2" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.5"/>
+  <circle cx="420" cy="280" r="8" fill="#6557D2" opacity="0.7"/>
+  <circle cx="780" cy="320" r="8" fill="#6557D2" opacity="0.7"/>
+  <circle cx="540" cy="260" r="5" fill="#6557D2" opacity="0.5"/>
+  <circle cx="660" cy="340" r="5" fill="#6557D2" opacity="0.5"/>
+  <text x="120" y="280" font-family="Manrope, Inter, sans-serif" font-size="56" font-weight="800" fill="#191919" letter-spacing="-0.02em">Kishan Kumar Ojha</text>
+  <text x="120" y="340" font-family="Inter, sans-serif" font-size="26" font-weight="500" fill="#3A3A3A">AI Engineer &bull; Generative AI &bull; Machine Learning</text>
+  <text x="120" y="380" font-family="Inter, sans-serif" font-size="20" font-weight="400" fill="#686868">MCA &bull; SRM Institute of Science and Technology</text>
+</svg>

@@ -48,5 +48,5 @@ export function useTheme() {
     return () => media.removeEventListener("change", handler)
   }, [theme, mounted, applyTheme, resolveTheme])
 
-  return { theme, setTheme, mounted }
+  return { theme, setTheme, mounted, resolved: resolveTheme(theme) }
 }

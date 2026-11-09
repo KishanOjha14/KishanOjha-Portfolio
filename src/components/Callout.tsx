@@ -16,7 +16,7 @@ export default function Callout({ title, children, className, icon }: CalloutPro
         </svg>
       )}
       <div>
-        {title && <p className="font-semibold text-sm text-[var(--text)] mb-1">{title}</p>}
+        {title && <p className="font-semibold text-sm text-[var(--text)] mb-1 tracking-tight">{title}</p>}
         {children}
       </div>
     </div>

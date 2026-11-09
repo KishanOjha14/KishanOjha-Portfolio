@@ -25,8 +25,8 @@ function App() {
     }
   }
 
-  const handleResumeDownload = () => {
-    scrollToSection("resume")
+  const handleResumeDownload = (file: string) => {
+    window.location.href = file
   }
 
   return (
