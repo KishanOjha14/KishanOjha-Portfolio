@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight, Mail, MapPin, Cpu, Layers } from "lucide-react"
+import { ArrowRight, Mail, MapPin } from "lucide-react"
 import { HERO } from "@/data/content"
 import ScrollReveal from "./ScrollReveal"
 import { KOBrand } from "./KOBrand"
@@ -76,7 +76,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               <div className="absolute inset-0 rounded-[var(--radius-4xl)] border border-accent/20 bg-accent/5 blur-[60px] opacity-50 animate-[pulse-soft_4s_ease-in-out_infinite]" />
               <div className="relative z-10">
                 <img
-                  src="/profile-avatar.png"
+                  src="/profile-photo.jpg"
                   alt="Kishan Kumar Ojha"
                   className="w-full h-auto rounded-[var(--radius-3xl)] border border-[var(--border)] shadow-card relative z-10 block mx-auto max-w-[400px] shadow-accent"
                   width="800"
