@@ -1,12 +1,25 @@
 export const NAME = "Kishan Kumar Ojha"
 
+export const IDENTITY = {
+  name: NAME,
+  headline: "AI Engineer | Generative AI | Machine Learning | Python",
+  tagline:
+    "Building intelligent applications through Machine Learning, Generative AI and software engineering.",
+  introduction:
+    "I'm Kishan Kumar Ojha, an MCA candidate specializing in Generative AI at SRM Institute of Science and Technology. I enjoy building intelligent applications, exploring machine learning systems, working with data and developing technology-driven solutions. My interests span Generative AI, deep learning, computer vision, data analytics and software engineering.",
+  location: "Noida, India",
+  email: "work.kishanojha@gmail.com",
+  phone: "+91 8739047520",
+}
+
 export const HERO = {
   name: NAME,
-  title: "Software Engineer | Backend Development | Java & Spring Boot | AI/ML Enthusiast",
-  description:
-    "Software engineer focused on building reliable backend systems, scalable APIs and intelligent applications. Experienced in Java, Spring Boot, cloud deployment, Python and machine learning, with practical exposure to production software and data-driven projects.",
+  headline: IDENTITY.headline,
+  tagline: IDENTITY.tagline,
+  introduction: IDENTITY.introduction,
   actions: [
-    { label: "View Projects", href: "#projects", variant: "primary" },
+    { label: "Explore Projects", href: "#projects", variant: "primary" },
+    { label: "Read Technical Notes", href: "#blog", variant: "outline" },
     { label: "Download Resume", href: "#resume", variant: "outline" },
     { label: "Contact Me", href: "#contact", variant: "outline" },
   ],
@@ -19,24 +32,60 @@ export const HERO = {
 
 export const ABOUT = {
   title: "About Me",
-  intro:
-    "I am a software engineer with hands-on backend development experience and additional capabilities in AI/ML and data analytics. I am currently pursuing a Master of Computer Applications (MCA) specializing in Generative AI at SRM Institute of Science and Technology (expected May 2027), after completing my Bachelor of Computer Applications (BCA) at IMS Ghaziabad (July 2022 – July 2025).",
-  highlights: [
+  paragraphs: [
+    "I'm an MCA candidate specializing in Generative AI at SRM Institute of Science and Technology (expected May 2027), building on a Bachelor of Computer Applications from IMS Ghaziabad (July 2022 – July 2025). My academic journey has given me a structured foundation in computer science, while my projects and internships have taught me how to turn that foundation into working software.",
+    "On the AI side, I've worked with PyTorch and Scikit-learn to build machine learning models, trained a CNN for CT-scan image classification, and explored medical imaging research using DenseNet121 and the NIH ChestX-ray14 dataset. I've also analyzed 7,000+ telecom records end-to-end — from SQL Server data preparation to Power BI dashboards — surfacing churn patterns and retention insights.",
+    "On the engineering side, I've spent time as a Software Engineering Intern at Scramble Labs Technology, enhancing a production enterprise CRM platform with Spring Boot, Hibernate and MySQL, designing 15+ RESTful APIs, and deploying containerized services on AWS. Before that, I built backend modules for a Java-based Car Rental Management System at Hindalco Industries. I'm also a co-founder at ArnoLabs, where we build web platforms, APIs and automation workflows for business clients.",
+    "I see myself as an aspiring AI Engineer: comfortable with models and data, but grounded in the software engineering practices — APIs, databases, cloud deployment, testing — that make intelligent applications reliable enough to ship.",
+  ],
+}
+
+export const CURRENTLY_EXPLORING = {
+  title: "Currently Exploring",
+  subtitle:
+    "What I'm learning and building right now. I separate hands-on experience from areas I'm actively studying.",
+  items: [
     {
-      label: "Backend Development",
-      text: "Software Engineering Intern at Scramble Labs Technology (May 2025 – April 2026), where I enhanced a production enterprise CRM platform using Spring Boot, Hibernate and MySQL, designed 15+ RESTful APIs, and deployed containerized services with Docker and Kubernetes on AWS Elastic Beanstalk.",
+      label: "Generative AI",
+      status: "Learning",
+      description:
+        "Large language models, prompt engineering and RAG patterns. Exploratory study — not yet applied in a shipped project.",
     },
     {
-      label: "Cloud & DevOps",
-      text: "Experience with AWS Elastic Beanstalk, Amazon S3, Google Cloud Platform, Docker, Kubernetes and CI/CD workflows, diagnosing issues across API, business logic and database layers.",
+      label: "AI Agents & Tool Use",
+      status: "Learning",
+      description:
+        "Agent orchestration and tool-calling workflows. Research and experimentation stage.",
     },
     {
-      label: "AI/ML & Analytics",
-      text: "Built an ML research pipeline with PyTorch and DenseNet121 (NIH ChestX-ray14), a lung cancer detection system with Streamlit and TensorFlow/Keras CNNs, and a telco churn analytics pipeline with SQL Server and Power BI across 7,000+ records.",
+      label: "Retrieval-Augmented Generation (RAG)",
+      status: "Learning",
+      description:
+        "Vector databases, embeddings and retrieval pipelines. Conceptual and prototype stage.",
     },
     {
-      label: "Leadership",
-      text: "Co-founder at ArnoLabs, a SaaS startup where we built web platforms, APIs and automation workflows for business clients alongside a 10+ employee team.",
+      label: "Computer Vision",
+      status: "Hands-on",
+      description:
+        "Trained CNNs on CT-scan imagery and explored DenseNet121 for chest X-ray classification.",
+    },
+    {
+      label: "Model Evaluation & Explainability",
+      status: "Hands-on",
+      description:
+        "AUROC, F1-optimal thresholds, temperature scaling and Grad-CAM in medical imaging research.",
+    },
+    {
+      label: "Data Analytics",
+      status: "Hands-on",
+      description:
+        "End-to-end churn analysis with SQL Server, Python and Power BI across 7,000+ records.",
+    },
+    {
+      label: "Backend Engineering",
+      status: "Hands-on",
+      description:
+        "Spring Boot, Hibernate, MySQL, Docker, Kubernetes and AWS Elastic Beanstalk in production CRM work.",
     },
   ],
 }
@@ -49,14 +98,15 @@ export const EXPERIENCE = [
     location: "Hybrid, Delhi",
     type: "Internship",
     icon: "code-2",
+    description:
+      "Enhanced a production enterprise CRM platform, improving reliability for 10+ business clients using Spring Boot, Hibernate and MySQL.",
     achievements: [
-      "Enhanced a production backend platform for an enterprise CRM, improving reliability for 10+ business clients using Spring Boot, Hibernate and MySQL",
       "Designed and implemented 15+ RESTful APIs and backend modules",
-      "Collaborated with Product, QA and frontend engineering teams in an Agile environment",
+      "Collaborated with Product, QA and frontend engineering teams",
       "Containerized and deployed backend services using Docker and Kubernetes on AWS Elastic Beanstalk",
       "Used Amazon S3 for application storage; worked across AWS and Google Cloud Platform environments",
       "Diagnosed backend issues across API, business logic and database layers",
-      "Participated in code reviews, testing and production deployments",
+      "Participated in Agile development, code reviews, testing and production deployments",
     ],
   },
   {
@@ -66,12 +116,14 @@ export const EXPERIENCE = [
     location: "Renukoot, Uttar Pradesh",
     type: "Internship",
     icon: "building-2",
+    description:
+      "Developed backend modules for a Java-based Car Rental Management System using Java and JDBC.",
     achievements: [
-      "Developed backend modules for a Java-based Car Rental Management System using Java and JDBC",
       "Worked across five core modules: booking, customer management, rental tracking, billing and reporting",
       "Optimized database operations for 1,000+ records",
       "Improved data consistency through SQL query and JOIN design",
-      "Performed debugging and unit testing; documented 3+ system workflows and technical specifications",
+      "Performed debugging and unit testing",
+      "Documented 3+ system workflows and technical specifications",
     ],
   },
   {
@@ -81,6 +133,8 @@ export const EXPERIENCE = [
     location: "India",
     type: "Leadership",
     icon: "award",
+    description:
+      "Co-founded a SaaS startup building web platforms, APIs and automation workflows for business clients.",
     achievements: [
       "Co-founded a SaaS startup with a 10+ employee team",
       "Developed scalable software solutions and custom client products",
@@ -109,22 +163,10 @@ export const EDUCATION = [
   },
 ]
 
-export const LEADERSHIP = {
-  title: "Leadership",
-  company: "ArnoLabs",
-  role: "Co-founder",
-  description:
-    "Co-founded a SaaS startup and led development of scalable software solutions and custom client products. The team built web platforms, APIs and automation workflows for multiple business clients (ML-resume-verified delivery for 15+ business clients).",
-  focus: [
-    "Product development for web platforms and APIs",
-    "SaaS solutions and custom client products",
-    "Automation workflows for business clients",
-    "Team collaboration and client-facing software delivery",
-  ],
-}
-
 export const CONTACT = {
-  title: "Get in Touch",
+  title: "Let's Connect",
+  message:
+    "Interested in AI engineering, Generative AI, machine learning and building useful intelligent applications. Always open to meaningful technical conversations and collaboration.",
   email: "work.kishanojha@gmail.com",
   phone: "+91 8739047520",
   location: "Noida, India",
@@ -140,10 +182,11 @@ export const SOCIALS = [
 export const NAV_ITEMS = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Skills", href: "#skills" },
+  { label: "Exploring", href: "#exploring" },
   { label: "Projects", href: "#projects" },
+  { label: "Skills", href: "#skills" },
+  { label: "Experience", href: "#experience" },
   { label: "Education", href: "#education" },
-  { label: "Leadership", href: "#leadership" },
+  { label: "Writing", href: "#blog" },
   { label: "Contact", href: "#contact" },
 ]

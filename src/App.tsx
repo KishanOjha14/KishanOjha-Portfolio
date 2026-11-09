@@ -5,11 +5,12 @@ import { useState } from "react"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import About from "./components/About"
+import CurrentlyExploring from "./components/CurrentlyExploring"
 import Skills from "./components/Skills"
 import Projects from "./components/Projects"
-import Education from "./components/Education"
 import Experience from "./components/Experience"
-import Leadership from "./components/Leadership"
+import Education from "./components/Education"
+import Blog from "./components/Blog"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 
@@ -34,11 +35,12 @@ function App() {
       <main className="flex-1">
         <Hero onNavigate={scrollToSection} />
         <About />
-        <Experience />
+        <CurrentlyExploring />
         <Skills />
         <Projects />
+        <Experience />
         <Education />
-        <Leadership />
+        <Blog />
         <Contact />
       </main>
       <Footer />
