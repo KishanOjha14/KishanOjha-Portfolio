@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="400" height="300" fill="none"/>
+  <g fill="#0f172a" stroke="#334155" stroke-width="1.5">
+    <rect x="140" y="40" width="120" height="76" rx="8"/>
+    <rect x="160" y="54" width="80" height="10" rx="3" fill="#1e293b"/>
+    <rect x="160" y="72" width="60" height="8" rx="2" fill="#1e293b"/>
+    <rect x="30" y="160" width="100" height="90" rx="8"/>
+    <rect x="50" y="174" width="60" height="10" rx="3" fill="#1e293b"/>
+    <rect x="50" y="192" width="40" height="8" rx="2" fill="#1e293b"/>
+    <rect x="270" y="160" width="100" height="90" rx="8"/>
+    <rect x="290" y="174" width="60" height="10" rx="3" fill="#1e293b"/>
+    <rect x="290" y="192" width="40" height="8" rx="2" fill="#1e293b"/>
+  </g>
+  <path d="M160 116 Q160 160 110 205" stroke="#64748b" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <path d="M240 116 Q240 160 290 205" stroke="#64748b" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <path d="M200 76 Q200 40 170 40" stroke="#64748b" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <text x="200" y="100" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">REST APIs</text>
+  <text x="200" y="136" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">Spring Boot</text>
+  <text x="80" y="274" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">MySQL</text>
+  <text x="320" y="274" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">Thymeleaf UI</text>
+  <text x="200" y="14" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle">CampusFlow — Role-Based Platform</text>
+</svg>

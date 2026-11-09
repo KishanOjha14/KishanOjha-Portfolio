@@ -1,70 +1,66 @@
+"use client"
+
+import { EDUCATION } from "@/data/content"
+import ScrollReveal from "./ScrollReveal"
+import SectionTitle from "./SectionTitle"
+import { GraduationCap, BookOpen } from "lucide-react"
+
+const ICONS: Record<string, React.ElementType> = {
+  "graduation-cap": GraduationCap,
+  "book-open": BookOpen,
+}
+
 export default function Education() {
-  const education = [
-    {
-      period: "2025 - Present",
-      degree: "Master's in Computer Applications (Generative AI)",
-      institution: "SRM University, (IST)",
-      description:
-        [
-          <div>
-            <p>
-              I am currently pursuing my Master’s with a specialization in Generative AI, where I am exploring advanced concepts in machine learning, deep learning, and AI-driven system development. My academic journey focuses on understanding neural architectures, LLMs, model training pipelines, and practical applications of generative models. Through various projects and research-oriented coursework, I am developing the ability to design intelligent, scalable, and production-ready AI solutions tailored to industry needs.
-            </p>
-            <h2>Key Highlights:</h2>
-            <ul>
-              <li>Specializing in Generative AI with a focus on advanced ML, DL, and LLM-based systems.</li>
-              <li>Studying neural architectures, model training, and AI deployment workflows.</li>
-              <li>Working on projects involving generative models and practical AI applications.</li>
-              <li>Developing strong research, analytical, and model-building skills for real-world use cases.</li>
-            </ul>
-          </div>
-
-        ],
-    },
-    {
-      period: "2022 - 2025",
-      degree: "Bachelor's in Computer Applications",
-      institution: "IMS Ghaziabad (Ghaziabad, Uttar Pradesh)",
-      description: [
-        <div>
-          <p>
-            During my Bachelor's, I built a strong foundation in core computer science, software engineering, and application development. I gained hands-on experience with Java, Python, HTML, CSS, JavaScript, SQL, and Django while working on multiple academic and personal projects. My studies included essential topics such as data structures, algorithms, operating systems, and full-stack web development, enabling me to solve real-world problems with structured thinking and efficient coding. I also actively participated in workshops, seminars, and coding competitions, which strengthened my analytical abilities, teamwork, and technical confidence.
-          </p>
-          <h3>Key Highlights:</h3>
-          <ul>
-            <li>Built strong fundamentals in programming, computer science, and software development.</li>
-            <li>Worked extensively with Java, Python, HTML, CSS, JavaScript, SQL, and Django.</li>
-            <li>Completed projects involving data structures, algorithms, OS, databases, and full-stack development.</li>
-            <li>Participated in workshops, hackathons, and coding challenges to enhance problem-solving skills.</li>
-            <li>Gained practical exposure to building scalable applications and managing end-to-end development workflows.</li>
-          </ul>
-        </div>
-
-      ],
-    }
-    ,
-  ]
-
   return (
-    <section className="py-16 border-t border-gray-200">
-      <h2 className="text-3xl font-bold text-gray-900 mb-4">Education</h2>
-      <p className="text-gray-600 mb-12">Academic background and qualifications</p>
+    <section id="education" className="section" aria-labelledby="education-title">
+      <div className="container-page">
+        <ScrollReveal delay={1}>
+          <SectionTitle
+            title="Education"
+            subtitle="Academic background in computer applications."
+          />
+        </ScrollReveal>
 
-      <div className="space-y-8">
-        {education.map((edu, idx) => (
-          <div key={idx} className="flex gap-6">
-            <div className="flex flex-col items-center">
-              <div className="w-4 h-4 rounded-full bg-gray-900 mt-2"></div>
-              {idx < education.length - 1 && <div className="w-0.5 h-24 bg-gray-200 mt-2"></div>}
-            </div>
-            <div className="pb-8">
-              <p className="text-sm font-medium text-gray-500 mb-2">{edu.period}</p>
-              <h3 className="text-xl font-semibold text-gray-900 mb-1">{edu.degree}</h3>
-              <p className="text-sm text-gray-600 mb-3">{edu.institution}</p>
-              <p className="text-sm text-gray-600 leading-relaxed">{edu.description}</p>
-            </div>
-          </div>
-        ))}
+        <div className="relative max-w-2xl mx-auto space-y-0">
+          <div className="absolute left-[34px] top-0 bottom-0 w-0.5 bg-[var(--border-soft)]" />
+          {EDUCATION.map((edu, idx) => {
+            const Icon = ICONS[edu.icon] || GraduationCap
+            const isLast = idx === EDUCATION.length - 1
+            return (
+              <ScrollReveal key={edu.institution} delay={(((2 + idx) % 3) + 1) as 1 | 2 | 3} className="relative pl-12 pb-12 md:pb-0 group">
+                <div className="absolute left-[28px] top-3 w-4 h-4 rounded-full bg-accent ring-8 ring-[var(--bg-surface)] z-10" />
+                <div className="card p-6">
+                  <div className="flex flex-col md:flex-row justify-between items-start gap-3 mb-2">
+                    <div>
+                      <h3 className="font-semibold text-[var(--text-heading)]">{edu.degree}</h3>
+                      <p className="text-accent font-medium text-sm">{edu.institution}</p>
+                      {edu.specialization && (
+                        <p className="text-[var(--text-body)] text-sm mt-1">{edu.specialization}</p>
+                      )}
+                    </div>
+                    <div className="text-right hidden md:block">
+                      <p className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wide">
+                        {edu.period}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs text-[var(--text-muted)] mb-4 md:mb-0">
+                    <span className="flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                      {edu.location}
+                    </span>
+                  </div>
+                  {isLast ? null : (
+                    <div className="absolute left-[32px] -top-[calc(100%+8px)] w-0.5 h-[calc(100%+16px)] bg-[var(--border-soft)]" />
+                  )}
+                </div>
+              </ScrollReveal>
+            )
+          })}
+        </div>
+        <div className="mt-8 text-right hidden md:block">
+          <p className="text-xs text-[var(--text-muted)] uppercase tracking-wide">MCA expected May 2027 · BCA July 2022 – July 2025</p>
+        </div>
       </div>
     </section>
   )

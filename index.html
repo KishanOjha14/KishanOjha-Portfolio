@@ -2,12 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="public/WhatsApp Image 2025-10-23 at 11.28.07 AM.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Kishan Ojha</title>
+    <meta name="description" content="Portfolio of Kishan Kumar Ojha — Software Engineer specializing in Java, Spring Boot, backend development, cloud technologies, machine learning and data analytics." />
+    <meta name="author" content="Kishan Kumar Ojha" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kishan Kumar Ojha | Software Engineer & AI/ML Developer" />
+    <meta property="og:description" content="Portfolio of Kishan Kumar Ojha — Software Engineer specializing in Java, Spring Boot, backend development, cloud technologies, machine learning and data analytics." />
+    <meta property="og:image" content="/assets/images/hero-visual.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Kishan Kumar Ojha | Software Engineer & AI/ML Developer</title>
+
+    <!-- Theme: set before React hydrates to prevent flash of wrong theme -->
+    <script>
+      (function () {
+        var STORAGE_KEY = "portfolio-theme";
+        var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var stored = localStorage.getItem(STORAGE_KEY);
+        var isDark = stored ? stored === "dark" : systemDark;
+        if (isDark) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      })();
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,86 +1,71 @@
-import React from 'react';
+"use client"
+
+import { EXPERIENCE } from "@/data/content"
+import ScrollReveal from "./ScrollReveal"
+import SectionTitle from "./SectionTitle"
+import { Code2, Building2, Award } from "lucide-react"
+
+const ICONS: Record<string, React.ElementType> = {
+  "code-2": Code2,
+  "building-2": Building2,
+  award: Award,
+}
 
 export default function Experience() {
-  const experiences = [
-    {
-      title: "Project Intern",
-      company: "Hindalco Industries Ltd.",
-      details: [
-    <div>
-  <p>
-    During my internship at Hindalco Industries Ltd, I had the opportunity to work on a real-world Java-based project, applying technical knowledge to practical scenarios and deepening my understanding of backend integration and database management.
-  </p>
-  <h2>Key Contributions & Learnings:</h2>
-  <ul>
-    <li>1. Built Java-based full-stack applications connected to MySQL databases.</li>
-    <li>2. Handled data modeling, CRUD operations, and database optimization for performance.</li>
-    <li>3. Collaborated with mentors and engineers to debug, document, and improve code quality following best practices.</li>
-  </ul>
-  <span>On-site • Internship</span>
-</div>
-
-  ],
-      period: "Jul, 2024 - Aug, 2024",
-      type: "On-site • Internship ",
-      icon: "🏢",
-    },
-    // {
-    //   title: "Content Writing",                                                                                      
-    //   company: "Team Everest NGO",                                                                                                                                                 
-    //   details: "Team Everest NGO •",
-    //   period: "Nov, 2023",
-    //   type: "Internship • online •",
-    //   icon: "✍️",
-    // },
-    // {
-    //   title: "Content Writing",
-    //   company: "Earth 5R",
-    //   details: "Earth 5R •",
-    //   period: "Nov, 2023",
-    //   type: "Internship • remote •",
-    //   icon: "🌍",
-    // },
-    // {
-    //   title: "Internshala Student Partner",
-    //   company: "Internshala",
-    //   details: "Internshala • Campus Ambassador",
-    //   period: "Jun, 2024 - Aug, 2024",
-    //   type: "Part-time • • Remote",
-    //   icon: "📱",
-    // },
-  ]
-
   return (
-    <section className="py-16 border-t border-gray-200">
-      <h2 className="text-3xl font-bold text-gray-900 mb-4">Experiences</h2>
-      <p className="text-gray-600 mb-12">Current and previous collaborations with leading companies.</p>
+    <section id="experience" className="section" aria-labelledby="experience-title">
+      <div className="container-page">
+        <ScrollReveal delay={1}>
+          <SectionTitle
+            title="Experience"
+            subtitle="Professional internships, engineering work and startup leadership."
+          />
+        </ScrollReveal>
 
-      <div className="space-y-8 mb-12">
-        {experiences.map((exp, idx) => (
-          <div key={idx} className="flex gap-6">
-            <div className="text-3xl flex-shrink-0">{exp.icon}</div>
-            <div className="flex-1">
-              <div className="flex justify-between items-start mb-2">
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900">{exp.title}</h3>
-                  <p className="text-sm text-gray-600">{exp.company}</p>
+        <div className="relative space-y-0">
+          <div className="absolute left-[34px] top-0 bottom-0 w-0.5 bg-[var(--border-soft)]" />
+          {EXPERIENCE.map((exp, idx) => {
+            const Icon = ICONS[exp.icon] || Code2
+            const isLast = idx === EXPERIENCE.length - 1
+            return (
+              <ScrollReveal key={exp.company} delay={(((2 + idx) % 3) + 1) as 1 | 2 | 3} className="relative pl-12 pb-12 md:pb-0 group">
+                <div className="absolute left-[28px] top-3 w-4 h-4 rounded-full bg-[var(--text-heading)] ring-8 ring-[var(--bg-surface)] group-hover:ring-accent transition-all z-10" />
+                <div className="card p-6 md:p-8">
+                  <div className="flex flex-col md:flex-row md:items-start justify-between gap-3 mb-3">
+                    <div>
+                      <h3 className="font-semibold text-[var(--text-heading)]">{exp.role}</h3>
+                      <p className="text-accent font-medium text-sm">{exp.company}</p>
+                    </div>
+                    <div className="flex flex-col md:flex-row gap-2 text-xs text-[var(--text-muted)]">
+                      <span className="flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent" /> {exp.period}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent" /> {exp.location}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[var(--text-muted)]">
+                      {exp.type}
+                    </span>
+                  </div>
+                  <ul className="space-y-3 text-[var(--text-body)] text-sm leading-relaxed">
+                    {exp.achievements.map((a) => (
+                      <li key={a} className="flex gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--text-muted)] shrink-0 mt-[7px]" />
+                        {a}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="text-sm font-medium text-gray-600 text-right">{exp.period}</p>
-              </div>
-              <p className="text-sm text-gray-600 mb-2">{exp.details}</p>
-              <p className="text-xs text-gray-500">{exp.type}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* View Resume Button */}
-      <div className="flex justify-center">
-        <a href="https://drive.google.com/file/d/1C6794-uI4Jv4OUFcK7QesrUV7Xq7abg4/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-          <button className="px-8 py-3 bg-gray-900 text-white font-medium rounded hover:bg-gray-800 transition-colors">
-            View Resume
-          </button>
-        </a>
+                {!isLast && (
+                  <div className="absolute left-[32px] -top-[calc(100%+8px)] w-0.5 h-[calc(100%+16px)] bg-[var(--border-soft)]" />
+                )}
+              </ScrollReveal>
+            )
+          })}
+        </div>
       </div>
     </section>
   )

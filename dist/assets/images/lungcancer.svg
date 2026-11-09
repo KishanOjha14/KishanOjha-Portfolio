@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="none"/>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+  <g fill="#0f172a" stroke="#334155" stroke-width="1.5">
+    <rect x="40" y="100" width="110" height="90" rx="8"/>
+    <rect x="60" y="114" width="70" height="10" rx="3" fill="#1e293b"/>
+    <rect x="60" y="132" width="50" height="8" rx="2" fill="#1e293b"/>
+    <rect x="250" y="100" width="110" height="90" rx="8"/>
+    <rect x="270" y="114" width="70" height="10" rx="3" fill="#1e293b"/>
+    <rect x="270" y="132" width="50" height="8" rx="2" fill="#1e293b"/>
+    <rect x="140" y="190" width="120" height="60" rx="8"/>
+    <rect x="160" y="204" width="80" height="10" rx="3" fill="#1e293b"/>
+    <rect x="160" y="222" width="50" height="8" rx="2" fill="#1e293b"/>
+  </g>
+  <path d="M150 145 Q150 190 180 225" stroke="#64748b" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <path d="M305 145 Q305 190 220 225" stroke="#64748b" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <text x="95" y="106" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">Tabular Data</text>
+  <text x="95" y="118" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">(17 features)</text>
+  <text x="305" y="106" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">CT Scan Images</text>
+  <text x="305" y="118" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">(Kaggle)</text>
+  <text x="200" y="222" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">Streamlit Application</text>
+  <text x="200" y="236" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">Risk classification</text>
+  <text x="200" y="12" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Lung Cancer Detection — ML + CNN</text>
+  <rect x="95" y="264" width="30" height="10" rx="3" fill="#1e293b"/>
+  <rect x="275" y="264" width="30" height="10" rx="3" fill="#1e293b"/>
+</svg>

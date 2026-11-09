@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="none"/>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+  <g fill="#0f172a" stroke="#334155" stroke-width="1.5">
+    <rect x="40" y="90" width="120" height="110" rx="8"/>
+    <rect x="60" y="104" width="80" height="10" rx="3" fill="#1e293b"/>
+    <rect x="60" y="122" width="55" height="8" rx="2" fill="#1e293b"/>
+    <rect x="240" y="90" width="120" height="110" rx="8"/>
+    <rect x="260" y="104" width="80" height="10" rx="3" fill="#1e293b"/>
+    <rect x="260" y="122" width="55" height="8" rx="2" fill="#1e293b"/>
+  </g>
+  <path d="M160 200 Q160 220 130 250" stroke="#64748b" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <path d="M300 200 Q300 220 270 250" stroke="#64748b" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <rect x="110" y="250" width="180" height="26" rx="6" fill="#111827" stroke="#334155" stroke-width="1"/>
+  <rect x="130" y="258" width="100" height="10" rx="3" fill="#1e293b"/>
+  <rect x="130" y="276" width="60" height="8" rx="2" fill="#1e293b"/>
+  <text x="100" y="158" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">Raw Data</text>
+  <text x="100" y="170" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">7,000+ records</text>
+  <text x="300" y="158" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">SQL Server</text>
+  <text x="300" y="170" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">ETL + Validation</text>
+  <text x="200" y="286" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">Power BI Dashboards</text>
+  <text x="200" y="10" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Telco Churn — Data Analytics</text>
+</svg>

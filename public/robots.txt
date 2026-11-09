@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kishanojha.dev/sitemap.xml
